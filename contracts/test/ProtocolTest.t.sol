@@ -5,7 +5,7 @@ import "ds-test/test.sol";
 import "../Common.sol";
 import "../BaseMainnet.sol";
 
-contract ContractTest is DSTest {
+contract ProtocolTest is DSTest {
     Common common;
     Cauldron cauldron;
     BaseMainnet protocolConfig;
