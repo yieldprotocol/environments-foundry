@@ -4,6 +4,12 @@ pragma solidity 0.8.6;
 /// @title A contract containing the protocol configuration data for the Mainnet
 contract BaseMainnet {
     
+    // Governance
+    address public multiSig = 0xd659565b84BcfcB23B02ee13E46CB51429F4558A;
+    address public timelock = 0x3b870db67a45611CF4723d44487EAF398fAc51E3;
+    address public cloak = 0xaa7B33685e9730B4D700b8F3F190EcA5EC4cf106;
+
+    // Protocol
     address public cauldronAddress = 0xc88191F8cb8e6D4a668B047c1C8503432c3Ca867;
     address public ladleAddress = 0x6cB18fF2A33e981D1e38A663Ca056c0a5265066A;
 

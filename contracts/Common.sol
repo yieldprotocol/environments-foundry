@@ -4,13 +4,7 @@ pragma solidity 0.8.6;
 /// @title A contract containing Ids which are common across the protcol
 contract Common {
     // Asset Ids
-    bytes6[] public assetIds;
-
-    // Series Ids
-    bytes6[] public seriesIds;
-
-    constructor() {
-        assetIds = [
+    bytes6[] public assetIds = [
             bytes6(0x303000000000), //ETH
             bytes6(0x303100000000), //DAI
             bytes6(0x303200000000), //USDC
@@ -28,13 +22,13 @@ contract Common {
             // bytes6(0x313500000000)//FUSDC2206
         ];
 
-        seriesIds = [
-            bytes6(0x303130350000), //FYDAI2203
-            bytes6(0x303130360000), //FYDAI2206
-            bytes6(0x303230350000), //FYUSDC2203
-            bytes6(0x303230360000) //FYUSDC2206
-        ];
-    }
+    // Series Ids
+    bytes6[] public seriesIds = [
+        bytes6(0x303130350000), //FYDAI2203
+        bytes6(0x303130360000), //FYDAI2206
+        bytes6(0x303230350000), //FYUSDC2203
+        bytes6(0x303230360000) //FYUSDC2206
+    ];
 
     function getAssetIds() public view returns (bytes6[] memory) {
         return assetIds;
