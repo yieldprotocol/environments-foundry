@@ -1,0 +1,19 @@
+{
+  "name": "environments-foundry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prafful",
+  "license": "ISC",
+  "dependencies": {
+    "@yield-protocol/utils-v2": "^2.5.1",
+    "@yield-protocol/vault-interfaces": "^2.3.3",
+    "@yield-protocol/vault-v2": "^0.15.1-notional-rc4"
+  }
+}
