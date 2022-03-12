@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.6;
 
+/// @title A contract containing Ids which are common across the protcol
 contract Common {
     // Asset Ids
-    bytes6[] public assetIds = new bytes6[](16);
+    bytes6[] public assetIds;
 
     // Series Ids
-    bytes seriesIds;
+    bytes6[] public seriesIds;
 
     constructor() {
         assetIds = [
@@ -26,9 +27,20 @@ contract Common {
             // bytes6(0x313400000000),//FUSDC2203
             // bytes6(0x313500000000)//FUSDC2206
         ];
+
+        seriesIds = [
+            bytes6(0x303130350000), //FYDAI2203
+            bytes6(0x303130360000), //FYDAI2206
+            bytes6(0x303230350000), //FYUSDC2203
+            bytes6(0x303230360000) //FYUSDC2206
+        ];
     }
 
     function getAssetIds() public view returns (bytes6[] memory) {
         return assetIds;
+    }
+
+    function getSeriesIds() public view returns (bytes6[] memory) {
+        return seriesIds;
     }
 }

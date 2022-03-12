@@ -1,18 +1,11 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.6;
 
-// Assets are obtained by querying the cauldron with all asset ids
-// FYToken are obtained by querying the cauldron with all series ids
-// Joins are obtained by querying the ladle with all asset ids
-// Pools are obtained by querying the ladle with all series ids
-
+/// @title A contract containing the protocol configuration data for the Mainnet
 contract BaseMainnet {
-    address developer = 0xC7aE076086623ecEA2450e364C838916a043F9a8;
-    address deployer = 0xC7aE076086623ecEA2450e364C838916a043F9a8;
-    address daiWhale = 0xC7aE076086623ecEA2450e364C838916a043F9a8;
-    address usdcWhale = 0xC7aE076086623ecEA2450e364C838916a043F9a8;
-
+    
     address public cauldronAddress = 0xc88191F8cb8e6D4a668B047c1C8503432c3Ca867;
+    address public ladleAddress = 0x6cB18fF2A33e981D1e38A663Ca056c0a5265066A;
 
     mapping(bytes6 => address) public assetAddress;
 
@@ -29,3 +22,9 @@ contract BaseMainnet {
         assetAddress[0x303900000000] = 0xa354F35829Ae975e850e23e9615b11Da1B3dC4DE;//YVUSDC
     }
 }
+
+// Note:
+// Assets are obtained by querying the cauldron with all asset ids
+// FYToken are obtained by querying the cauldron with all series ids
+// Joins are obtained by querying the ladle with all asset ids
+// Pools are obtained by querying the ladle with all series ids
