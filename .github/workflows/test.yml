@@ -24,4 +24,4 @@ jobs:
       - name: Run tests
         env:
             ALCHEMY_KEY: ${{ secrets.ALCHEMY_KEY }}
-        run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/${{ ALCHEMY_KEY }} -vvvvv
+        run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/${{ env.ALCHEMY_KEY }} -vvvvv
