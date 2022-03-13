@@ -20,6 +20,8 @@ jobs:
         uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
+      - name: Build
+        run: forge build --hh
 
       - name: Run tests
         env:
