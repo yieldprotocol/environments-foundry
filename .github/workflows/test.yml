@@ -11,6 +11,7 @@ jobs:
     name: Foundry project
     runs-on: ubuntu-latest
     steps:
+        
       - uses: actions/checkout@v2
         with:
           submodules: recursive
@@ -21,4 +22,6 @@ jobs:
           version: nightly
 
       - name: Run tests
-        run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/${{ sercrets.ALCHMEY_KEY }} -vvvvv
+        env:
+            ALCHEMY_KEY: ${{ secrets.ALCHEMY_KEY }}
+        run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/${{ ALCHEMY_KEY }} -vvvvv
