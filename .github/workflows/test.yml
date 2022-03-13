@@ -24,9 +24,8 @@ jobs:
         uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
-
+      - run: forge build --hh
       - name: Run tests
         env:
             ALCHEMY_KEY: ${{ secrets.ALCHEMY_KEY }}
-        run: forge build --hh
-      - run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/$ALCHEMY_KEY -vvvvv --hh
+        run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/$ALCHEMY_KEY -vvvvv --hh
