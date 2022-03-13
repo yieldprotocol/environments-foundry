@@ -13,10 +13,9 @@ jobs:
     steps:
         
       - uses: actions/checkout@v2
-        with:
-          submodules: recursive
       - uses: actions/setup-node@v2
         with:
+          submodules: recursive
           node-version: 12.x
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
