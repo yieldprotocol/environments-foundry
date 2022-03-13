@@ -21,4 +21,4 @@ jobs:
           version: nightly
 
       - name: Run tests
-        run: forge test -vvv
+        run: forge test --fork-url https://eth-mainnet.alchemyapi.io/v2/${{ sercrets.ALCHMEY_KEY }} -vvvvv
